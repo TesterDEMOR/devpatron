@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПАРОН.ОНЛАЙН</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #050505; /* Глубокий черный */
+            color: #fff;
+            font-family: 'Archivo Black', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Фоновый текст на заднем плане для стиля */
+        body::before {
+            content: "PATRON";
+            position: absolute;
+            font-size: 25vw;
+            color: rgba(255, 255, 255, 0.03);
+            z-index: 0;
+            white-space: nowrap;
+        }
+
+        .content {
+            z-index: 1;
+            text-align: center;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 8rem); /* Адаптивный размер */
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .status-bar {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 5px 15px;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 0.7rem;
+            letter-spacing: 0.5em;
+            color: #444;
+            text-transform: uppercase;
+        }
+
+        /* Простая анимация мерцания, как на старых мониторах */
+        .glitch {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="status-bar">SITE UNDER MAINTENANCE</div>
+        <h1 class="glitch">ТЕХНИЧЕСКИЕ<br>РАБОТЫ</h1>
+    </div>
+
+    <div class="footer">
+        PATRON.ONLINE // 2026
+    </div>
+
+</body>
+</html>
